@@ -1,10 +1,16 @@
 import { Icon, Step, Header } from 'semantic-ui-react';
 import "semantic-ui-css/semantic.min.css";
+import { useContext } from 'react';
+import { AppState } from '../context';
 
 export default function ModuleSteps() {
+
+  const state = useContext(AppState);
+  const { step } = state; 
+
   return(
     <Step.Group style={{ textAlign: "left"}}>
-      <Step active>
+      <Step active={step===1}>
         <Icon as={Header}>1</Icon>
         <Step.Content>
           <Step.Title>Introduction</Step.Title>
@@ -12,7 +18,7 @@ export default function ModuleSteps() {
         </Step.Content>
       </Step>
 
-      <Step>
+      <Step active={step===2}>
         <Icon as={Header}>2</Icon>
         <Step.Content>
           <Step.Title>An In Depth Look</Step.Title>
@@ -20,7 +26,7 @@ export default function ModuleSteps() {
         </Step.Content>
       </Step>
 
-      <Step>
+      <Step active={step===3}>
         <Icon as={Header}>3</Icon>
         <Step.Content>
           <Step.Title>An Example</Step.Title>
@@ -28,7 +34,7 @@ export default function ModuleSteps() {
         </Step.Content>
       </Step>
 
-      <Step>
+      <Step active={step===4}>
         <Icon as={Header}>4</Icon>
         <Step.Content>
           <Step.Title>Try It Yourself</Step.Title>
@@ -36,7 +42,7 @@ export default function ModuleSteps() {
         </Step.Content>
       </Step>
 
-      <Step>
+      <Step active={step===5}>
         <Icon as={Header}>5</Icon>
         <Step.Content>
           <Step.Title>What Have We Learned</Step.Title>
