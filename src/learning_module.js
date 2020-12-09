@@ -1,5 +1,5 @@
 import { Grid, Button, Header } from 'semantic-ui-react';
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import { AppState } from './context';
 import { BrowserRouter, useHistory } from 'react-router-dom';
 import SocialMediaCard from './components/social_media_card'
@@ -10,8 +10,8 @@ import './styles/main.css'
 function LearningModule() {
 
   const state = useContext(AppState);
-  const { step, setStep } = state; 
-
+  const { step, setStep, unfinished } = state; 
+  
   const NextStepButton = () => {
     let history = useHistory();
     const handleClick = () => {
@@ -24,7 +24,7 @@ function LearningModule() {
       }
     }
     return (
-      <Button fluid content="Next Step" onClick={handleClick} />
+      <Button fluid content="Continue To Next Part" disabled={unfinished} onClick={handleClick} />
     );
   }
 
@@ -56,13 +56,13 @@ function LearningModule() {
           <Grid.Row style={{backgroundColor: "blueviolet"}}>
             <ModuleSteps />
           </Grid.Row>
-          <Grid.Row>
-            <ModuleContent />
-          </Grid.Row>
-          <Grid.Row>
+          <Grid.Row style={{backgroundColor: "blueviolet"}}>
             <Grid.Column width={6}> 
               <NextStepButton />
             </Grid.Column>
+          </Grid.Row>
+          <Grid.Row>
+            <ModuleContent />
           </Grid.Row>
         </Grid>
       </main>

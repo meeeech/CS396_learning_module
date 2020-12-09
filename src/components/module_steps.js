@@ -34,14 +34,6 @@ export default function ModuleSteps() {
         </Step.Content>
       </Step>
 
-      <Step active={step===4}>
-        <Icon as={Header}>4</Icon>
-        <Step.Content>
-          <Step.Title>Try It Yourself</Step.Title>
-          <Step.Description>Check out what your cookies look like</Step.Description>
-        </Step.Content>
-      </Step>
-
       <Step active={step===5}>
         <Icon as={Header}>5</Icon>
         <Step.Content>
