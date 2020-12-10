@@ -55,7 +55,7 @@ const siteInfo = {
 
 const StateProvider = ({ children }) => {
   const [step, setStep] = useState(1);
-  const [ unfinished, setDisabled ] = useState(true);
+  const [ unfinished, setDisabled ] = useState(false);
   const [selectedState, setSelectedState] = useState(siteInfo.default);
   const [visitedSites, setVisitedSites] = useState({
     facebook: 0,

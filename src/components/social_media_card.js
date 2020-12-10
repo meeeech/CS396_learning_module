@@ -1,4 +1,4 @@
-import { useState, useContext } from 'react';
+import { useState, useContext, useEffect } from 'react';
 import { AppState, siteInfo } from '../context';
 import { Button, Icon, Grid, Header, Divider, Label, Image } from "semantic-ui-react";
 import "semantic-ui-css/semantic.min.css";
@@ -7,7 +7,7 @@ const sites = ['facebook', 'twitter', 'instagram', 'snapchat', 'youtube'];
 
 export default function SocialMediaCard() { 
   const state = useContext(AppState);
-  const { unfinished, setDisabled, visitedSites, setVisitedSites, selectedState, setSelectedState } = state;
+  const { unfinished, setDisabled, visitedSites, setVisitedSites, selectedState, setSelectedState, setStep } = state;
   
   const toggleSite = (site) => {
     setSelectedState(siteInfo[site]);
@@ -15,12 +15,11 @@ export default function SocialMediaCard() {
     if (visitedSites[site] === 0) {
       visitedSites[site] += 1;
     }
-    let sumValues = Object.values(visitedSites).reduce((a, b) => a + b);
-    if (sumValues === 5) {
-      setDisabled(false);
-    }
-    console.log(visitedSites)
   };
+
+  useEffect(() => { 
+    setStep(1);
+  }, [])
 
   return (
     <Grid centered>

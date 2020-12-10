@@ -2,9 +2,10 @@ import { Grid, Button, Header } from 'semantic-ui-react';
 import { useContext, useState } from 'react';
 import { AppState } from './context';
 import { BrowserRouter, useHistory } from 'react-router-dom';
-import SocialMediaCard from './components/social_media_card'
+import SocialMediaCard from './components/social_media_card';
 import ModuleSteps from './components/module_steps';
-import './styles/main.css'
+import CookieActivityCard from './components/cookie_activity';
+import './styles/main.css';
 
 
 function LearningModule() {
@@ -35,6 +36,9 @@ function LearningModule() {
       }
       case 2: {
         return <Grid.Column textAlign="center"><Header content="Test Content" /></Grid.Column>
+      }
+      case 3: { 
+        return <CookieActivityCard />
       }
       default: {
         return <Grid.Column textAlign="center"><Header content="Test Content" /></Grid.Column>

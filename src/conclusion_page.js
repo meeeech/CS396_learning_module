@@ -15,7 +15,7 @@ export default function LandingPage() {
           <Grid.Row>
             <Button 
               size="large" 
-              class="landingButton" 
+              className="landingButton" 
               content="Go To The Beginning" 
               as={Link}
               to='/'

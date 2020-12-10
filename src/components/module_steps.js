@@ -34,8 +34,8 @@ export default function ModuleSteps() {
         </Step.Content>
       </Step>
 
-      <Step active={step===5}>
-        <Icon as={Header}>5</Icon>
+      <Step active={step===4}>
+        <Icon as={Header}>4</Icon>
         <Step.Content>
           <Step.Title>What Have We Learned</Step.Title>
           <Step.Description>An overview</Step.Description>
