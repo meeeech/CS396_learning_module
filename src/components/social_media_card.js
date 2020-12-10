@@ -7,7 +7,7 @@ const sites = ['facebook', 'twitter', 'instagram', 'snapchat', 'youtube'];
 
 export default function SocialMediaCard() { 
   const state = useContext(AppState);
-  const { unfinished, setDisabled, visitedSites, setVisitedSites, selectedState, setSelectedState, setStep } = state;
+  const { visitedSites, setVisitedSites, selectedState, setSelectedState, setStep } = state;
   
   const toggleSite = (site) => {
     setSelectedState(siteInfo[site]);
@@ -23,13 +23,18 @@ export default function SocialMediaCard() {
 
   return (
     <Grid centered>
+      <Grid.Row columns={1}>
+        <Grid.Column width="8">
+          <Header content="An Introduction" dividing />
+        </Grid.Column>
+      </Grid.Row>
       <Grid.Row>
         <Header>
           How many of these sites do you use? <br/>
           And do you know how THEY might be using YOU? 
         </Header>
       </Grid.Row>
-      <Grid.Row style={{ backgroundColor: "#F8F8F8"}}>
+      <Grid.Row>
         <Header as="h4" style={{ color: "blueviolet"}}>
           Click on a site's logo to learn more about how they can use your data. <br/> 
           Progress to the next section when you have clicked on and read about each site. 

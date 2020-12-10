@@ -55,7 +55,6 @@ const siteInfo = {
 
 const StateProvider = ({ children }) => {
   const [step, setStep] = useState(1);
-  const [ unfinished, setDisabled ] = useState(false);
   const [selectedState, setSelectedState] = useState(siteInfo.default);
   const [visitedSites, setVisitedSites] = useState({
     facebook: 0,
@@ -75,7 +74,7 @@ const StateProvider = ({ children }) => {
 
   
 
-  const data = { step, setStep, unfinished, setDisabled, selectedState, setSelectedState, visitedSites, setVisitedSites };
+  const data = { step, setStep, selectedState, setSelectedState, visitedSites, setVisitedSites };
   return <Provider value={data}>{children}</Provider>;
 };
 

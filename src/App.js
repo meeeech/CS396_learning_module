@@ -1,4 +1,4 @@
-import { Grid, Button, Header } from 'semantic-ui-react';
+import { Grid, Button, Header, Icon } from 'semantic-ui-react';
 import { useContext, useState } from 'react';
 import { AppState } from './context';
 import { BrowserRouter, useHistory, Route, Switch, Redirect } from 'react-router-dom';
@@ -17,15 +17,22 @@ function App() {
   
   const NextStepButton = () => {
     let history = useHistory();
+    let text = step < 4 ? "Continue" : "Back to Start";
     const handleClick = () => {
       if (step <= 3) {
         setStep(step+1);
         history.push(routes[step]);
-        if (step === 3) setDisabled(true);
+      }
+      else {
+        setStep(1);
+        history.push(routes[0]);
       }
     }
     return (
-      <Button content="Continue To Next Section" disabled={unfinished} onClick={handleClick} />
+      <Button onClick={handleClick} compact icon fluid>
+        {text}
+        <Icon name='arrow right'/>
+      </Button>
     );
   }
 
@@ -36,7 +43,10 @@ function App() {
       history.push(routes[step-2]);
     }
     return (
-      <Button compact content="Previous Section" icon='arrow left' onClick={handleClick} />
+      <Button compact icon onClick={handleClick} fluid>
+        <Icon name='arrow left' />
+        Previous Section
+      </Button>
     )
   }
 
@@ -56,7 +66,13 @@ function App() {
             <ModuleSteps />
           </Grid.Row>
           <Grid.Row style={{backgroundColor: "blueviolet"}}>
-            {step > 1 ? <BackButton /> : null}
+            <Grid.Column width="3">
+              {step > 1 ? <BackButton /> : null}
+            </Grid.Column>
+            <Grid.Column width="10" />
+            <Grid.Column width="3">
+              <NextStepButton />
+            </Grid.Column>
           </Grid.Row>
           <Grid.Row>
               <Switch>
@@ -73,9 +89,6 @@ function App() {
                   <Header content="HEY" />
                 </Route>
               </Switch>
-          </Grid.Row>
-          <Grid.Row>
-            <NextStepButton />
           </Grid.Row>
         </Grid>
         </BrowserRouter>
