@@ -76,6 +76,11 @@ export default function SocialMediaCard() {
           {selectedState.app !== '' ? <div><Divider /><Label color="black" content="THE TAKEAWAY..." /><strong style={{ color: "blueviolet" }}>{selectedState.takeaway}</strong></div> : ''}
         </Grid.Column>
       </Grid.Row>
+      <Grid.Row>
+        <Grid.Column width="6">
+          <p style={{ color: "blueviolet"}}> Click the Continue button at the top right hand corner of the page to move onto the next section. </p>
+        </Grid.Column>
+      </Grid.Row>
     </Grid>
   )
 }

@@ -5,7 +5,8 @@ import { BrowserRouter, useHistory, Route, Switch, Redirect } from 'react-router
 import SocialMediaCard from './components/social_media_card';
 import ModuleSteps from './components/module_steps';
 import CookieActivityCard from './components/cookie_activity';
-import DeepDive from './components/deep_dive'
+import DeepDive from './components/deep_dive';
+import TopBar from './components/top_menu';
 import './styles/main.css';
 
 
@@ -29,7 +30,7 @@ function App() {
       }
     }
     return (
-      <Button onClick={handleClick} compact icon fluid>
+      <Button style={{backgroundColor: "white", color: "blueviolet"}} onClick={handleClick} compact icon fluid>
         {text}
         <Icon name='arrow right'/>
       </Button>
@@ -43,7 +44,7 @@ function App() {
       history.push(routes[step-2]);
     }
     return (
-      <Button compact icon onClick={handleClick} fluid>
+      <Button style={{backgroundColor: "white", color: "blueviolet"}} compact icon onClick={handleClick} fluid>
         <Icon name='arrow left' />
         Previous Section
       </Button>
@@ -54,6 +55,7 @@ function App() {
     <div className="container1">
       <main className="main1">
         <BrowserRouter>
+        <TopBar />
         <Grid centered>
           <Grid.Row style={{backgroundColor: "blueviolet"}}>
             <Grid.Column>

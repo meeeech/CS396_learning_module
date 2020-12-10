@@ -166,6 +166,11 @@ export default function CookieActivityCard() {
           <p>Think about the video’s final remarks. What information are the websites you most frequently visit using cookies to store? What are they using that information for?</p>
           <p>Remember that cookies are just a tiny piece of the data tracking puzzle! There’s a lot more to it. This demo is just to show you how easy it can be to remember your information.</p>
         </Grid.Row>
+        <br/>
+        <br/>
+        <Grid.Row>
+          <p style={{ color: "blueviolet"}}> Click the Continue button at the top right hand corner of the page to move onto the next section. </p>
+        </Grid.Row>
       </Grid.Column>
     </Grid>
   )

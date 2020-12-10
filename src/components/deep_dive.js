@@ -173,6 +173,11 @@ export default function DeepDive() {
           <p>Large tech companies are wary of giving up these ad targeting capabilities in the face of public scrutiny. “Google elected to limit audience targeting for election ads to age, gender, and zip code” (Maréchal & Biddle, 2020), yet, as Ruha Benjamin notes in her book Race After Technology: Abolitionist Tools for the New Jim Code (2019),”in a country as segregated as the United States, geography is a reliable proxy for race.” This, of course, includes zip codes, so has Google really surrendered the ability to target election ads based on race?</p>
           <p>Now ask yourself what social media platforms are doing with your data besides optimizing the user experience. Do these actions have positive effects? For whom? Do they have negative effects? For who?</p>
         </Grid.Row>
+        <br/>
+        <br/>
+        <Grid.Row>
+          <p style={{ color: "blueviolet"}}> Click the Continue button at the top right hand corner of the page to move onto the next section. </p>
+        </Grid.Row>
       </Grid.Column>
     </Grid>
   )
