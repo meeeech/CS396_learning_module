@@ -65,6 +65,16 @@ const StateProvider = ({ children }) => {
     youtube: 0
   });
 
+  const cookies = document.cookie.split(';').reduce((cookies, cookie) => {
+    const [ name, value ] = cookie.split('=').map(c => c.trim());
+    cookies[name] = value;
+    return cookies;
+  }, {});
+  
+  console.log(cookies)
+
+  
+
   const data = { step, setStep, unfinished, setDisabled, selectedState, setSelectedState, visitedSites, setVisitedSites };
   return <Provider value={data}>{children}</Provider>;
 };
