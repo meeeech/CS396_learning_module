@@ -136,6 +136,43 @@ export default function DeepDive() {
         <Grid.Row>
           <Header content="Why Are Social Media Companies After Your Data?" dividing />
         </Grid.Row>
+        <br/>
+        <Grid.Row>
+          <p>Social media companies compile users’ data to inform algorithms that aim to match each user to content they are most likely to engage with. This content includes posts made by those they follow as well as targeted advertisements. The more engaged with the content they are, the more likely they are to click on the ads and generate ad revenue for the social media platform. At the same time, they are more likely to spend more time on the platform, generating clicks and, ultimately, more data for the platform to feed into its data-driven algorithms.</p>
+          <p>Nathalie Maréchal and Ellery Roberts Biddle, in their 2020 report “It’s Not Just the Content, It’s the Business Model: Democracy’s Online Speech Challenge,” call these data-driven algorithms that optimize what content to show users to optimize engagement “content-shaping algorithms.” Read their description of content-shaping algorithms below. Consider the graphic that follows.</p>
+          <p>“While companies describe such algorithms as matching users with the content that is most relevant to them, this relevance is measured by predicted engagement: how likely users are to click, comment on, or share a piece of content. Companies make these guesses based on factors like users’ previous interaction with similar content and the interactions of other users who are similar to them. The more accurate these guesses are, the more valuable the company becomes for advertisers, leading to ever-increasing profits for internet platforms. This is why mass data collection is so central to Big Tech’s business models: companies need to surveil internet users in order to make predictions about their future behavior.”</p>
+        </Grid.Row>
+        <br/>
+        <br/>
+        <Grid.Row>
+          <Image src="/media-model.png" />
+        </Grid.Row>
+        <br/>
+        <Grid.Row>
+          <p>Consider content-shaping algorithms and the image above. How do social media companies benefit from this model? Do users benefit? If so, how? Are users harmed? Again, if so, how?</p>
+          <p>Alright. So social media companies track users’ data so they can match them with company they’ll engage with. They’re improving the user experience, right? Maybe, but at what expense?</p>
+          <p>Maréchal and Biddle observe that “researchers and journalists have found strong evidence that algorithmic content-shaping systems that are optimized for user engagement prioritize controversial and inflammatory content” (2020). In other words, these content-shaping algorithms aim to direct eye-catching, engaging content at users who will click on it. Unfortunately, disinformation, conspiracy theories, and extremism fall under the category of eye-catching, engaging content, and that dangerous material is further propelled by social media’s algorithms. This, Maréchal and Biddle note, is dangerous for our democracy.</p>
+        </Grid.Row>
+        <Divider/>
+        <Grid.Row>
+          <strong style={{ color: "blueviolet" }}>Read the following passages from their 2020 report in relation to the United States’ 2016 and 2020 elections and misleading political advertisements.</strong>
+          <ul>
+            <li><i>“Virality is often driven by corporate algorithms designed to prioritize views or clicks, in order to raise the visibility of content that appears to inspire user interest. Similarly, when a targeted ad reaches a certain voter, and influences how or whether they vote, it is rarely accidental. It is the result of sophisticated systems that can target very specific demographics of voters in a particular place”</i></li>
+            <br/>
+            <li><i>“In the 2020 election cycle, we find ourselves in an online environment dominated by algorithms that appear ever-more powerful and effective at spreading content to precisely the people who will be most affected by it, thanks to continued advances in data tracking and analysis. Some campaigns are now using cell phone location data to identify churchgoers, Planned Parenthood patients, and similarly sensitive groups. Many of the risks we’ve articulated in unique examples thus far will be in play, and algorithms likely will multiply their effects for everyone who relies on social media for news and information”</i></li>
+          </ul>
+        </Grid.Row>
+        <br/>
+        <Grid.Row>
+          <strong style={{ color: "blueviolet" }}>Also note that, with the user data social media platforms accumulate, they are able to allow advertisers to select what audiences to advertise to and who not to advertise to, even based race (Maréchal & Biddle, 2020). Read the following ProPublica article for an example of such a case.</strong>
+          <br/>
+          <a href="https://www.propublica.org/article/facebook-lets-advertisers-exclude-users-by-race">Link to article</a>
+        </Grid.Row>
+        <Divider />
+        <Grid.Row>
+          <p>Large tech companies are wary of giving up these ad targeting capabilities in the face of public scrutiny. “Google elected to limit audience targeting for election ads to age, gender, and zip code” (Maréchal & Biddle, 2020), yet, as Ruha Benjamin notes in her book Race After Technology: Abolitionist Tools for the New Jim Code (2019),”in a country as segregated as the United States, geography is a reliable proxy for race.” This, of course, includes zip codes, so has Google really surrendered the ability to target election ads based on race?</p>
+          <p>Now ask yourself what social media platforms are doing with your data besides optimizing the user experience. Do these actions have positive effects? For whom? Do they have negative effects? For who?</p>
+        </Grid.Row>
       </Grid.Column>
     </Grid>
   )
