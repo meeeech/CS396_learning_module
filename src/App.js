@@ -13,7 +13,6 @@ function App() {
   const state = useContext(AppState);
   const { step, setStep, unfinished, setDisabled } = state;
   const routes = ["/", "/deeper-look", "/cookies", "/end"]
-
   
   const NextStepButton = () => {
     let history = useHistory();
@@ -25,8 +24,19 @@ function App() {
       }
     }
     return (
-      <Button fluid content="Continue To Next Part" disabled={unfinished} onClick={handleClick} />
+      <Button content="Continue To Next Section" disabled={unfinished} onClick={handleClick} />
     );
+  }
+
+  const BackButton = () => {
+    let history = useHistory(); 
+    const handleClick = () => {
+      setStep(step-1);
+      history.push(routes[step-2]);
+    }
+    return (
+      <Button compact content="Previous Section" icon='arrow left' onClick={handleClick} />
+    )
   }
 
   return (
@@ -45,9 +55,7 @@ function App() {
             <ModuleSteps />
           </Grid.Row>
           <Grid.Row style={{backgroundColor: "blueviolet"}}>
-            <Grid.Column width={6}> 
-              <NextStepButton />
-            </Grid.Column>
+            {step > 1 ? <BackButton /> : null}
           </Grid.Row>
           <Grid.Row>
               <Switch>
@@ -64,6 +72,9 @@ function App() {
                   <Header content="HEY" />
                 </Route>
               </Switch>
+          </Grid.Row>
+          <Grid.Row>
+            <NextStepButton />
           </Grid.Row>
         </Grid>
         </BrowserRouter>

@@ -1,6 +1,6 @@
 import { useState, useContext, useEffect } from 'react';
 import { AppState } from '../context';
-import { Grid, Input, Select, Form, Header, Divider } from 'semantic-ui-react';
+import { Grid, Input, Select, Form, Header, Divider, Segment, Image, Embed, Button } from 'semantic-ui-react';
 
 const colorOptions = [
   { key: 0, value: "#FF0000", text: "Red" },
@@ -61,7 +61,8 @@ export default function CookieActivityCard() {
   }
 
   const state = useContext(AppState);
-  const { setStep } = state;
+  const { setStep, step } = state;
+  const routes = ["/", "/deeper-look", "/cookies", "/end"]
 
   useEffect(() => { 
     setStep(3);
@@ -72,45 +73,95 @@ export default function CookieActivityCard() {
     <Grid centered columns={1}> 
       <Grid.Column width="6" textAlign="centered">
         <Grid.Row>
-          <Header 
-            textAlign="center" 
-            content={message} 
-            style={{ color: headercolor}}
-          />
-        <Grid.Row>
-          <Divider />
-        </Grid.Row>
-          <Form>
-            <Form.Input 
-              fluid 
-              label='Your Name' 
-              placeholder='Firstname Lastname' 
-              onChange={e => setUsername(e.target.value)}
-            />
-            <Form.Select 
-              fluid 
-              label='Favorite Color' 
-              placeholder='Red'
-              options={colorOptions}
-              onChange={(e, {value}) => setColor(value)}
-            />
-            <Form.Button 
-              fluid style={{ backgroundColor: "blueviolet", color: "white"}} 
-              content="Make a Cookie!" 
-              onClick={createCookie}
-              disabled={disable}
-            />
-          </Form>
+          <Header dividing>
+            Internet Cookies
+            <Header.Subheader content="You can't eat these ones :(" />
+          </Header>
         </Grid.Row>
         <br/>
         <Grid.Row>
+          <p>When you visit a website, it has the option of assigning you a unique ID, which is then saved by your browser.</p>
+          <p>The website associates your activity and preferences with your ID and stores that information on a database.</p>
+          <p>When you visit it next time through your browser, the website looks at your browser’s ID (your cookie) and uses it to remember your activity and preferences.</p>
+          <strong style={{ color: "blueviolet" }}>Give it a try here!</strong>
+          <p>In the box below, fill in the Name and Favorite Color fields, and then click Make a Cookie!
+          We promise we don't want anything to do with your data — feel free to lie about your name (or favorite color).</p>
+        </Grid.Row>
+        <br/>
+        <Segment>
+          <Grid.Row>
+            <Header 
+              textAlign="center" 
+              content={message} 
+              style={{ color: headercolor}}
+            />
+          <Grid.Row>
+          </Grid.Row>
+            <Form>
+              <Form.Input 
+                fluid 
+                label='Your Name' 
+                placeholder='Firstname Lastname' 
+                onChange={e => setUsername(e.target.value)}
+              />
+              <Form.Select 
+                fluid 
+                label='Favorite Color' 
+                placeholder='Black'
+                options={colorOptions}
+                onChange={(e, {value}) => setColor(value)}
+              />
+              <Form.Button 
+                fluid style={{ backgroundColor: "blueviolet", color: "white"}} 
+                content="Make a Cookie!" 
+                onClick={createCookie}
+                disabled={disable}
+              />
+            </Form>
+          </Grid.Row>
+        </Segment>
+        <br/>
+        <Grid.Row>
           {disable ? 
-          <Header as="h4">
+          <Header as="h4" style={{ color: "blueviolet"}}>
             Now, refresh the page, or navigate to a different site and then come back to this page.
-            <br/>
             You'll see that we remembered your name and favorite color, thanks to the cookie we just made!
+            <br/>
+            <br/>
           </Header>
           : ''}
+        </Grid.Row>
+        <Grid.Row>
+          <p>
+            On this website, we send you a cookie. On your end, your browser, be it Chrome, Firefox, or something else, saves it. On our end, we save your cookie in our database and associate it with the name and color you give us. 
+          </p>
+          <p>
+            When you reload the webpage, your browser sends us back your cookie, and we’re able to reference it in our database to see what you told us. That way, we can remember your name and favorite color. If you delete cookies in your browser, we’ll forget!
+          </p>
+        </Grid.Row>
+        <br/>
+        <Grid.Row>
+          <Image src="/cookiegraphic.png" size="large" label="Cookie Graphic"/>
+        </Grid.Row>
+        <br/>
+        <br/>
+        <Grid.Row>
+          <Header content="What else can cookies do?" dividing />
+        </Grid.Row>
+        <br/>
+        <Grid.Row>
+          <p>Even though we just used cookies to remember your name and favorite color, cookies can be used to remember a lot more about you - any information you voluntarily give like your address, password, and credit card information.</p>
+          <p>Cookies can even be used to remember what you click on and your browsing history. By now, you likely realize that dangerous authority and powerful insights can be made with this much data.</p>
+        </Grid.Row>
+        <br/>
+        <Grid.Row>
+          <strong style={{color: "blueviolet"}}>Watch this short video about cookies:</strong>
+          <Embed active id='I01XMRo2ESg' source='youtube' />
+        </Grid.Row>
+        <br/>
+        <Grid.Row>
+          <p>Think about the video’s final remarks. What information are the websites you most frequently visit using cookies to store? What are they using that information for?</p>
+          <p>Remember that cookies are just a tiny piece of the data tracking puzzle! There’s a lot more to it. This demo is just to show you how easy it can be to remember your information.</p>
         </Grid.Row>
       </Grid.Column>
     </Grid>

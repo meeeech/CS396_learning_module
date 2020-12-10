@@ -68,8 +68,7 @@ export default function SocialMediaCard() {
           <p>
             {selectedState.p3}
           </p>
-          <Divider />
-          {selectedState.app !== '' ? <div><Label color="black" content="THE TAKEAWAY..." /><strong style={{ color: "blueviolet" }}>{selectedState.takeaway}</strong></div> : ''}
+          {selectedState.app !== '' ? <div><Divider /><Label color="black" content="THE TAKEAWAY..." /><strong style={{ color: "blueviolet" }}>{selectedState.takeaway}</strong></div> : ''}
         </Grid.Column>
       </Grid.Row>
     </Grid>
