@@ -156,7 +156,7 @@ export default function CookieActivityCard() {
         <br/>
         <Grid.Row>
           <strong style={{color: "blueviolet"}}>Watch this short video about cookies:</strong>
-          <Embed active id='I01XMRo2ESg' source='youtube' />
+          <Embed id='I01XMRo2ESg' source='youtube' active autoplay={false} />
         </Grid.Row>
         <br/>
         <Grid.Row>

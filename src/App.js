@@ -5,6 +5,7 @@ import { BrowserRouter, useHistory, Route, Switch, Redirect } from 'react-router
 import SocialMediaCard from './components/social_media_card';
 import ModuleSteps from './components/module_steps';
 import CookieActivityCard from './components/cookie_activity';
+import DeepDive from './components/deep_dive'
 import './styles/main.css';
 
 
@@ -63,7 +64,7 @@ function App() {
                   <SocialMediaCard />
                 </Route>
                 <Route path="/deeper-look">
-                  <Header content="HEY" />
+                  <DeepDive />
                 </Route>
                 <Route path="/cookies">
                   <CookieActivityCard />
