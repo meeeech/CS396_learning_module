@@ -7,6 +7,7 @@ import ModuleSteps from './components/module_steps';
 import CookieActivityCard from './components/cookie_activity';
 import DeepDive from './components/deep_dive';
 import TopBar from './components/top_menu';
+import ExitQuestions from './components/exit_questions';
 import './styles/main.css';
 
 
@@ -88,7 +89,7 @@ function App() {
                   <CookieActivityCard />
                 </Route>
                 <Route path="/end">
-                  <Header content="HEY" />
+                  <ExitQuestions />
                 </Route>
               </Switch>
           </Grid.Row>

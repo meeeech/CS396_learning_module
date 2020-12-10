@@ -73,7 +73,7 @@ export default function DeepDive() {
             </ol>
           <p>Let’s pause. Ask yourself: is Big Data a good or bad thing? Given what we’ve discovered about what some of our favorite social media platforms do with our data, our first instinct might be to cast Big Data into the same basket of dystopia as 1984, autocracy, and the oversteppings of an insidious surveillance state. Before we make that leap, consider that Big Data can, with the proper attributions to ethics, privacy, context, and transparency lead to fascinating insights. But are we taking those precautions?</p>
           <Divider />
-          <strong style={{ color: "blueviolet"}}>Read the following article by Wired’s editor-in-chief Chris Anderson about what he dotingly calls “The Petabyte Age.” As you do so, think about boyd’s and Crawford’s definition of Big Data.</strong>
+          <strong style={{ color: "blueviolet"}}>Read the following 2008 article by Wired’s editor-in-chief Chris Anderson about what he dotingly calls “The Petabyte Age.” As you do so, think about boyd’s and Crawford’s definition of Big Data.</strong>
           <br/>
           <a href="https://www.wired.com/2008/06/pb-theory/">https://www.wired.com/2008/06/pb-theory/</a>
             <ol>
@@ -140,7 +140,7 @@ export default function DeepDive() {
         <Grid.Row>
           <p>Social media companies compile users’ data to inform algorithms that aim to match each user to content they are most likely to engage with. This content includes posts made by those they follow as well as targeted advertisements. The more engaged with the content they are, the more likely they are to click on the ads and generate ad revenue for the social media platform. At the same time, they are more likely to spend more time on the platform, generating clicks and, ultimately, more data for the platform to feed into its data-driven algorithms.</p>
           <p>Nathalie Maréchal and Ellery Roberts Biddle, in their 2020 report “It’s Not Just the Content, It’s the Business Model: Democracy’s Online Speech Challenge,” call these data-driven algorithms that optimize what content to show users to optimize engagement “content-shaping algorithms.” Read their description of content-shaping algorithms below. Consider the graphic that follows.</p>
-          <p>“While companies describe such algorithms as matching users with the content that is most relevant to them, this relevance is measured by predicted engagement: how likely users are to click, comment on, or share a piece of content. Companies make these guesses based on factors like users’ previous interaction with similar content and the interactions of other users who are similar to them. The more accurate these guesses are, the more valuable the company becomes for advertisers, leading to ever-increasing profits for internet platforms. This is why mass data collection is so central to Big Tech’s business models: companies need to surveil internet users in order to make predictions about their future behavior.”</p>
+          <p>“While companies describe such algorithms as matching users with the content that is most relevant to them, this relevance is measured by predicted engagement: how likely users are to click, comment on, or share a piece of content. Companies make these guesses based on factors like users’ previous interaction with similar content and the interactions of other users who are similar to them. The more accurate these guesses are, the more valuable the company becomes for advertisers, leading to ever-increasing profits for internet platforms. This is why mass data collection is so central to social media’s business models: companies need to surveil internet users in order to make predictions about their future behavior.”</p>
         </Grid.Row>
         <br/>
         <br/>
@@ -164,7 +164,7 @@ export default function DeepDive() {
         </Grid.Row>
         <br/>
         <Grid.Row>
-          <strong style={{ color: "blueviolet" }}>Also note that, with the user data social media platforms accumulate, they are able to allow advertisers to select what audiences to advertise to and who not to advertise to, even based race (Maréchal & Biddle, 2020). Read the following ProPublica article for an example of such a case.</strong>
+          <strong style={{ color: "blueviolet" }}>Also note that, with the user data social media platforms accumulate, they are able to allow advertisers to select what audiences to advertise to and who not to advertise to, even based race (Maréchal & Biddle, 2020). Read the following 2016 ProPublica article for an example of such a case.</strong>
           <br/>
           <a href="https://www.propublica.org/article/facebook-lets-advertisers-exclude-users-by-race">Link to article</a>
         </Grid.Row>
