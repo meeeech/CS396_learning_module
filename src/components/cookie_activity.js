@@ -1,6 +1,6 @@
 import { useState, useContext, useEffect } from 'react';
 import { AppState } from '../context';
-import { Grid, Input, Select, Form, Header, Divider, Segment, Image, Embed, Button } from 'semantic-ui-react';
+import { Grid, Input, Select, Form, Header, Divider, Segment, Image, Embed, Button, Message } from 'semantic-ui-react';
 
 const colorOptions = [
   { key: 0, value: "#FF0000", text: "Red" },
@@ -71,7 +71,7 @@ export default function CookieActivityCard() {
 
   return (
     <Grid centered columns={1}> 
-      <Grid.Column width="6" textAlign="centered">
+      <Grid.Column width="8" textAlign="centered">
         <Grid.Row>
           <Header dividing>
             Internet Cookies
@@ -90,11 +90,14 @@ export default function CookieActivityCard() {
         <br/>
         <Segment>
           <Grid.Row>
-            <Header 
-              textAlign="center" 
-              content={message} 
-              style={{ color: headercolor}}
-            />
+            <Message>
+              <Header 
+                textAlign="center" 
+                as="h1"
+                content={message} 
+                style={{ color: headercolor}}
+              />
+            </Message>
           <Grid.Row>
           </Grid.Row>
             <Form>
