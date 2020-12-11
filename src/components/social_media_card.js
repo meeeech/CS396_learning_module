@@ -1,6 +1,6 @@
 import { useState, useContext, useEffect } from 'react';
 import { AppState, siteInfo } from '../context';
-import { Button, Icon, Grid, Header, Divider, Label, Image } from "semantic-ui-react";
+import { Button, Icon, Grid, Header, Divider, Label, Image, Message } from "semantic-ui-react";
 import "semantic-ui-css/semantic.min.css";
 
 const sites = ['facebook', 'twitter', 'instagram', 'snapchat', 'youtube'];
@@ -73,6 +73,14 @@ export default function SocialMediaCard() {
           <p>
             {selectedState.p3}
           </p>
+          {selectedState.app === 'Twitter' ? 
+            <Message>
+              <Message.Header content="What is an API?" />
+              <Message.Content>
+              API is the acronym for Application Programming Interface, which is a software intermediary that allows two applications to talk to each other. Each time you use an app like Facebook, send an instant message, or check the weather on your phone, you're using an API.
+              </Message.Content>
+            </Message>
+            : null}
           {selectedState.app !== '' ? <div><Divider /><Label color="black" content="THE TAKEAWAY..." /><strong style={{ color: "blueviolet" }}>{selectedState.takeaway}</strong></div> : ''}
         </Grid.Column>
       </Grid.Row>
